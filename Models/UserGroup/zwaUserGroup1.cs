@@ -1,0 +1,44 @@
+﻿using System;
+namespace WMSWebAPI.Models
+{
+    public class zwaUserGroup1
+    {
+        public int id { get; set; }
+        public int screenId { get; set; }
+        public int groupId { get; set; }
+        public string companyId { get; set; }
+        public int parentId { get; set; }
+        public string title { get; set; }
+        public string dscrptn { get; set; }
+        public string authorised { get; set; }
+        public DateTime lastModiDate { get; set; }
+        public string lastModiUser { get; set; }
+        public int isFunctionCtrl { get; set; }
+        public int isCompulsory { get; set; }
+        public decimal ctrlLimit { get; set; } // 20200423T1223 for specify the control limit of the permission (if any), johnny
+        public string appName { get; set; } // 20200507T1900 Add in to differential the app name permission
+
+        protected zwaUserGroup1(zwaUserGroup1 obj)
+        {
+            id = obj.id;
+            screenId = obj.screenId;
+            groupId = obj.groupId;
+            companyId = obj.companyId;
+            parentId = obj.parentId;
+            title = obj.title;
+            dscrptn = obj.dscrptn;
+            authorised = obj.authorised;
+            lastModiDate = obj.lastModiDate;
+            lastModiUser = obj.lastModiUser;
+            isFunctionCtrl = obj.isFunctionCtrl;
+            ctrlLimit = obj.ctrlLimit; // 20200423T1225
+        }
+
+        /// <summary>
+        ///  empty constructor for dapper mapping
+        /// </summary>
+        public zwaUserGroup1()
+        {
+        }
+    }
+}
